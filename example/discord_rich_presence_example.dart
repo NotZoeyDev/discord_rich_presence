@@ -18,6 +18,6 @@ void main() async {
     ),
   );
 
-  // Do your stuff here
+  // Disconnect when you're done (Will render the client unusable)
   await client.disconnect();
 }
