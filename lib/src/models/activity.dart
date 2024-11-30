@@ -23,10 +23,10 @@ class Activity {
   final ActivityAssets? assets;
 
   Map<String, dynamic> toJson() {
-    final Map<String, String?> _timestamps = timestamps?.toJson() ?? {};
+    final Map<String, Object?> _timestamps = timestamps?.toJson() ?? {};
     final Map<String, String?> _assets = assets?.toJson() ?? {};
 
-    _timestamps.removeWhere((_, String? value) => value == null);
+    _timestamps.removeWhere((_, Object? value) => value == null);
     _assets.removeWhere((_, String? value) => value == null);
 
     return {
@@ -87,10 +87,10 @@ class ActivityTimestamps {
   final DateTime? start;
   final DateTime? end;
 
-  Map<String, String?> toJson() {
-    return <String, String?>{
-      'start': start?.millisecondsSinceEpoch.toString(),
-      'end': end?.millisecondsSinceEpoch.toString(),
+  Map<String, Object?> toJson() {
+    return <String, Object?>{
+      'start': start?.millisecondsSinceEpoch,
+      'end': end?.millisecondsSinceEpoch,
     };
   }
 }

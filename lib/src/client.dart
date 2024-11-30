@@ -10,7 +10,7 @@ class Client {
   late Transport? _transport;
 
   Future<void> connect() async {
-    _transport = Transport(this);
+    _transport = Transport.create(this);
     await _transport?.connect();
 
     _transport?.events.stream.listen(_rpcMessage);
