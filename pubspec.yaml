@@ -1,7 +1,7 @@
 name: discord_rich_presence
 description: Discord Rich Presence library for Dart.
 repository: https://github.com/NotZoeyDev/discord_rich_presence
-version: 1.0.1
+version: 1.1.0
 
 environment:
   sdk: ^3.5.3
