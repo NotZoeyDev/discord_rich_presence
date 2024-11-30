@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:discord_rich_presence/discord_rich_presence.dart';
 
-
 void main() async {
   // Create your client
   final Client client = Client(clientId: '');
