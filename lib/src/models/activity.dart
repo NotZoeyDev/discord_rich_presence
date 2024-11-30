@@ -27,9 +27,9 @@ class Activity {
     final Map<String, String?> _assets = assets?.toJson() ?? {};
 
     _timestamps.removeWhere((_, Object? value) => value == null);
-    _assets.removeWhere((_, String? value) => value == null);
+    _assets.removeWhere((_, Object? value) => value == null);
 
-    return {
+    final Map<String, Object?> activity = {
       'name': name,
       'details': details,
       'state': state,
@@ -39,6 +39,10 @@ class Activity {
       'timestamps': _timestamps,
       'assets': _assets,
     };
+
+    activity.removeWhere((_, Object? value) => value == null);
+
+    return activity;
   }
 }
 
